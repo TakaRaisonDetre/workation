@@ -11,34 +11,8 @@ import Post from '../../components/Post'
 
 const SearchResultScreen = (props) => {
   
-   const {guests} = props
+   const {posts} = props
 
-    const [posts, setPosts] = useState([])
-
-    console.log(props)
-
-    useEffect(()=>{
-      const fetchPost = async()=>{
-            try{
-                const postResult = await API.graphql(
-                    graphqlOperation(listPosts, {
-                        filter: {
-                            maxGuests:{
-                                ge:guests
-                            }
-                        }
-                    }
-                    )
-                )
-                console.log(postResult)
-                setPosts(postResult.data.listPosts.items);
-
-            }catch(e){
-                console.log(e);
-            }
-                }
-      fetchPost()
-   },[])
    
     return (
         <View>

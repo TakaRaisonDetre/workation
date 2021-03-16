@@ -22,7 +22,9 @@ const DestinationSearchScreen = () => {
             onPress={(data, details = null) =>  {
                 // 'details' is provided when fetchDetails = true
                     console.log(data, details);
-                    navigation.navigate('Guest');
+                    navigation.navigate('Guest', {
+                        viewport:details.geometry.viewport
+                    });
                     }}
                     fetchDetails
                     styles={{

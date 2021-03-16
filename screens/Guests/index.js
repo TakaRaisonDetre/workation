@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { StyleSheet, Text, View , Pressable} from 'react-native'
 import styles from './styles'
-import {useNavigation} from '@react-navigation/native'
+import {useNavigation, useRoute} from '@react-navigation/native'
 
 
 
@@ -12,6 +12,7 @@ const GuestScreen = () => {
     const [infant, setInfant]=useState(0)
 
      const navigation = useNavigation();
+     const route = useRoute()
 
     return (
     <View style={{justifyContent:'space-between', height: '100%'}}>
@@ -117,7 +118,8 @@ const GuestScreen = () => {
             params :{
                 screen:'SearchResults',
                 params:{
-                   guests:adult + children
+                   guests:adult + children,
+                   viewport : route.params.viewport,
                 }
             }
         })}
