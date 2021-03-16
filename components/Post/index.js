@@ -9,8 +9,9 @@ const days = 5;
 const  Post =(props) => {
 
     console.log(props)
-    const post = props.post
+    const {post} = props
      const navigation = useNavigation()
+     
     const goToAccomPage =()=>{
      navigation.navigate('accomodation' ,{postId: post.id})
 

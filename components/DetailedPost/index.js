@@ -6,7 +6,7 @@ import styles from './styles'
 const  DetailedPost =(props) => {
 
     console.log(props)
-    const post = props.post
+    const {post} = props
 
     return (
       <ScrollView>
