@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "workationeedb7039": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
