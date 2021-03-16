@@ -3,6 +3,8 @@ import { StyleSheet, Text, View , Pressable} from 'react-native'
 import styles from './styles'
 import {useNavigation} from '@react-navigation/native'
 
+
+
 const GuestScreen = () => {
 
     const [adult , setAdult] = useState(0)
@@ -113,7 +115,10 @@ const GuestScreen = () => {
             navigation.navigate('Home', {
             screen : 'Explore',
             params :{
-                screen:'SearchResults'
+                screen:'SearchResults',
+                params:{
+                   guests:adult + children
+                }
             }
         })}
          style={{
