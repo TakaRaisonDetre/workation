@@ -1,0 +1,12 @@
+projects:
+  workation:
+    schemaPath: Users/taka_raison/Programming/Coding Archive/workation/graphql/schema.json
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql

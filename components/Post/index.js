@@ -3,6 +3,9 @@ import {View, Text, Image, Pressable} from 'react-native'
 import styles from './styles'
 import {useNavigation} from '@react-navigation/native'
 
+
+const days = 5;
+
 const  Post =(props) => {
 
     console.log(props)
@@ -32,7 +35,7 @@ const  Post =(props) => {
               <Text style={styles.newPrice}>  ¥{post.newPrice}</Text> / night
             </Text>
             {/* total price  */}
-            <Text style={styles.totalPrice}>¥{post.totalPrice}  total</Text> 
+            <Text style={styles.totalPrice}>¥{post.newPrice *days}  total 5days</Text> 
         </Pressable>
     )
 }
